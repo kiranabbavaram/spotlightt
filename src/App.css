@@ -1,0 +1,89 @@
+
+/* Global Styles */
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-gradient-heading {
+  background: linear-gradient(to right, #000, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Blur gradient background */
+.blur-gradient-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.blur-gradient-bg::before,
+.blur-gradient-bg::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.blur-gradient-bg::before {
+  background: rgba(120, 120, 220, 0.15);
+  width: 40%;
+  height: 40%;
+  top: -10%;
+  left: -10%;
+}
+
+.blur-gradient-bg::after {
+  background: rgba(220, 220, 255, 0.15);
+  width: 40%;
+  height: 40%;
+  bottom: -10%;
+  right: -10%;
+}
+
+/* Improved form inputs */
+.input-clean:focus {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Subtle animations */
+.hover-lift {
+  transition: transform 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
